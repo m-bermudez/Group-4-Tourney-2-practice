@@ -34,3 +34,21 @@ public class Sedan : Vehicle
         Console.WriteLine($"Sedan: {_make} {_model} ({_year}) - Seating Capacity: {_seatingCapacity}");
     }
 }
+
+public class SUV : Vehicle
+{
+    private int _seatingCapacity;
+    private bool _ABS;
+
+    public SUV(string make, string model, int year, int seatingCapacity,bool ABS)
+        : base(make, model, year)
+    {
+        _seatingCapacity = seatingCapacity;
+        _ABS = ABS;
+    }
+
+    public override void DisplayInfo()
+    {
+        Console.WriteLine($"Sedan: {_make} {_model} ({_year}) - Seating Capacity: {_seatingCapacity} , ABS is :{_ABS}");
+    }
+}
