@@ -18,3 +18,19 @@ public class Vehicle
         Console.WriteLine($"Vehicle: {_make} {_model} ({_year})");
     }
 }
+
+public class Sedan : Vehicle
+{
+    private int _seatingCapacity;
+
+    public Sedan(string make, string model, int year, int seatingCapacity)
+        : base(make, model, year)
+    {
+        _seatingCapacity = seatingCapacity;
+    }
+
+    public override void DisplayInfo()
+    {
+        Console.WriteLine($"Sedan: {_make} {_model} ({_year}) - Seating Capacity: {_seatingCapacity}");
+    }
+}
